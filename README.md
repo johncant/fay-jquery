@@ -73,7 +73,6 @@ Still to do
 -----------
 
 - Data
-- Deferred Object
 - Effects (Custom, Sliding)
 - Forms
 - Internals

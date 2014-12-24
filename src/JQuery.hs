@@ -292,6 +292,9 @@ noConflictBool = ffi "jQuery['noConflict'](%1)"
 
 -- TODO: jQuery['when'](): figure out Deferred first
 
+promise :: Defined Text -> Defined a -> JQuery -> Fay JQuery
+promise = ffi "%3.promise(%1, %2)"
+
 ----
 ---- CSS
 ----
@@ -371,10 +374,6 @@ setWidthWith = ffi "%2['width'](%1)"
 
 ----
 ---- Data
-----
-
-----
----- Deferred Object
 ----
 
 ----
