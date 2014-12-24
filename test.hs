@@ -260,7 +260,7 @@ testDeferredWhen = do
 
   dependent <- when_ [d1, d2] >>= done (\v -> do
     passTest dependentResolved
-    if v == ["Burns night", "Hogmanay"] then
+    if all (\(vi, ti) -> vi == ti) (zip v ["Burns night", "Hogmanay"]) then
       passTest dependentArgCorrect
     else
       -- TODO - Bug somewhere. Please see console output
